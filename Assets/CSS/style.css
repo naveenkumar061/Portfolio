@@ -526,5 +526,273 @@ html::-webkit-scrollbar-thumb {
 /* skills ends */
 
 /* project starts */
-/* Project */
+.projects {
+  background-color: white;
+  padding: 3rem;
+  padding-top: 10rem;
+}
+.project {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+}
+.project-info {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 2rem;
+}
+.project-image img {
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 250px;
+  object-fit: cover;
+}
+.project-desc {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-family: "Nunito", sans-serif;
+}
+.project-desc h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: rgb(105, 75, 11);
+}
+.project-desc p {
+  font-size: 1.5rem;
+}
+.technologies-used p {
+  text-transform: uppercase;
+  color: rgb(2, 93, 253);
+  padding-bottom: 1rem;
+}
+.project-links {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+}
+.project-links a {
+  color: rgb(255, 192, 77);
+  border-radius: 100%;
+  padding: 0.25rem 0.75rem;
+  background: black;
+  transition: all 0.2s linear;
+}
+.project-links a:hover {
+  background-color: rgb(255, 192, 77);
+  color: black;
+}
+@media (max-width: 600px) {
+  .project-image {
+    display: none;
+  }
+}
+@media (max-width: 350px) {
+  .technologies-used p {
+    display: none;
+  }
+}
 /* project ends */
+
+/* experience starts */
+.experience {
+  background-color: rgb(255, 249, 239);
+  padding: 3rem;
+  padding-top: 10rem;
+}
+.experience-container {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.experience-box {
+  padding: 1rem;
+  width: 50%;
+  border-top: 0.25rem dashed rgb(2, 93, 253);
+  position: relative;
+}
+.experience-box h3 {
+  font-size: 2rem;
+  color: rgb(105, 75, 11);
+}
+.experience-box p {
+  font-size: 1.5rem;
+}
+.experience-box span {
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  border-radius: 50%;
+  color: rgb(2, 93, 253);
+  background-color: black;
+  height: 3.25rem;
+  width: 3.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.experience-box:nth-child(odd) {
+  border-right: 0.25rem dashed rgb(2, 93, 253);
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  margin-left: 2rem;
+  padding-left: 0;
+}
+.experience-box:nth-child(even) {
+  border-left: 0.25rem dashed rgb(2, 93, 253);
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  margin-right: 2rem;
+  padding-left: 2rem;
+}
+.experience-box:first-child {
+  border-top: 0;
+  border-top-right-radius: 0;
+}
+.experience-box:last-child {
+  border-bottom-left-radius: 0;
+}
+.experience-box:nth-child(odd) span {
+  right: 0;
+  transform: translate(50%, -50%);
+}
+.experience-box:nth-child(even) span {
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 1050px) {
+  .experience-box {
+    width: 100%;
+  }
+}
+@media (max-width: 950px) {
+  .experience {
+    padding-top: 15rem;
+  }
+}
+/* experience ends */
+
+/* contact starts */
+.contact {
+  background-color: rgb(255, 255, 255);
+  padding: 3rem;
+  padding-top: 7rem;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.field input,
+.message textarea {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+  position: relative;
+}
+.field input::placeholder,
+.message textarea::placeholder {
+  color: rgb(121, 78, 0);
+}
+.field input:hover,
+.message textarea:hover {
+  color: rgb(255, 170, 13);
+}
+.button-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.button-area button {
+  background-color: rgb(255, 170, 13);
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.button-area button:hover {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  color: rgb(255, 170, 13);
+}
+/* contact ends */
+
+/* footer starts */
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 5rem 0 5rem;
+  font-size: 1.5rem;
+  background-color: rgb(0, 0, 77);
+  color: white;
+  gap: 5rem;
+}
+.footer-top {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+.footer-portfolio {
+  display: flex;
+  flex-direction: column;
+  width: 25.25%;
+}
+.footer-portfolio p {
+  color: rgb(242, 242, 242);
+}
+.singlelink a {
+  color: white;
+}
+.singlelink:hover a,
+.singlelink:hover i {
+  color: rgb(255, 174, 26);
+}
+.footer-contact-info i {
+  color: rgb(255, 174, 26);
+}
+.footer-contact-info .email {
+  text-transform: lowercase;
+}
+.share {
+  padding-top: 1rem;
+  display: flex;
+  gap: 2rem;
+}
+.share a {
+  border-radius: 50%;
+  background-color: white;
+  color: rgb(0, 0, 77);
+  padding: 1rem;
+}
+.share a:hover {
+  background-color: rgb(0, 0, 77);
+  border: 1px solid white;
+  color: rgb(255, 174, 26);
+}
+.footer-bottom {
+  text-align: center;
+}
+@media (max-width: 800px) {
+  .footer-portfolio {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .footer-quick-links {
+    display: none;
+  }
+  .footer {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 300px) {
+  .footer {
+    font-size: 0.75rem;
+  }
+}
+/* footer ends */
