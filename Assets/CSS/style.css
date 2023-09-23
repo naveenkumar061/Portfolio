@@ -504,6 +504,8 @@ html::-webkit-scrollbar-thumb {
   margin: 1rem;
   border-radius: 10px;
   background-color: black;
+  width: 100px;
+  height: 100px;
 }
 .skills-info span {
   color: white;
