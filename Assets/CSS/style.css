@@ -106,8 +106,8 @@ html::-webkit-scrollbar-thumb {
     position: absolute;
     top: 100%;
     height: auto;
-    width: 90vw;
-    left: 62.5px;
+    width: 100vw;
+    left: 0;
     background-color: rgb(64, 41, 0);
     padding: 3rem;
   }
