@@ -1,5 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Poppins:wght@400;600;700&display=swap");
 
+/* Variables */
+:root {
+  --primary-bg-color: rgb(255, 249, 239);
+  --selection-bg-color: rgb(64, 41, 0);
+  --special-color: rgb(255, 170, 13);
+  --second-special-color: rgb(255, 188, 64);
+  --third-special-color: rgb(255, 174, 26);
+  --content-color: rgb(121, 78, 0);
+  --second-context-color: rgb(105, 75, 11);
+  --hover-color: rgb(128, 83, 0);
+  --links-color: rgb(255, 192, 77);
+  --important-color: rgb(2, 93, 253);
+  --footer-color: rgb(0, 0, 77);
+  --white: rgb(255, 255, 255);
+  --black: rgb(0, 0, 0);
+  --primary-font-family: "Poppins", sans-serif;
+  --secondary-font-family: "Nunito", sans-serif;
+}
+
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -17,12 +37,12 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background: rgb(255, 249, 239);
-  font-family: "Poppins", sans-serif;
+  background: var(--primary-bg-color);
+  font-family: var(--primary-font-family);
 }
 *::selection {
-  background: rgb(64, 41, 0);
-  color: rgb(255, 255, 255);
+  background: var(--selection-bg-color);
+  color: var(--white);
 }
 html::-webkit-scrollbar {
   width: 0.5rem;
@@ -31,7 +51,7 @@ html::-webkit-scrollbar-track {
   background: rgb(255, 233, 191);
 }
 html::-webkit-scrollbar-thumb {
-  background: rgb(121, 78, 0);
+  background: var(--content-color);
 }
 .heading {
   font-size: 3.5rem;
@@ -40,7 +60,7 @@ html::-webkit-scrollbar-thumb {
   margin-bottom: 0.125rem;
 }
 .heading span {
-  color: rgb(255, 170, 13);
+  color: var(--special-color);
 }
 
 /* navbar starts */
@@ -49,7 +69,7 @@ html::-webkit-scrollbar-thumb {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
   position: fixed;
   z-index: 1;
-  background: rgb(255, 249, 239);
+  background: var(--primary-bg-color);
 }
 .navbar-menu-icon {
   display: none;
@@ -62,26 +82,26 @@ html::-webkit-scrollbar-thumb {
 }
 .navbar-logo-link {
   font-size: 2.75rem;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--primary-font-family);
   font-weight: 600;
-  color: rgb(64, 41, 0);
+  color: var(--selection-bg-color);
 }
 .navbar-logo-link:hover {
-  color: rgb(255, 188, 64);
+  color: var(--second-special-color);
 }
 .navbar-links {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--primary-font-family);
   font-size: 2rem;
   display: flex;
   gap: 2rem;
   padding: 0 1rem;
 }
 .navbar-links a {
-  color: rgb(64, 41, 0);
+  color: var(--selection-bg-color);
 }
 .navbar-links a:hover {
-  color: rgb(255, 188, 64);
-  border-bottom: 0.25rem solid rgb(255, 188, 64);
+  color: var(--special-color);
+  border-bottom: 0.25rem solid var(--special-color);
   padding-bottom: 0.5rem;
 }
 /* navbar ends */
@@ -93,7 +113,7 @@ html::-webkit-scrollbar-thumb {
     cursor: pointer;
     border: none;
     background-color: transparent;
-    color: rgb(64, 41, 0);
+    color: var(--selection-bg-color);
     font-size: 3rem;
     font-weight: 600;
   }
@@ -108,11 +128,11 @@ html::-webkit-scrollbar-thumb {
     height: auto;
     width: 100vw;
     left: 0;
-    background-color: rgb(64, 41, 0);
+    background-color: var(--selection-bg-color);
     padding: 3rem;
   }
   .navbar-links a {
-    color: rgb(255, 255, 255);
+    color: var(--white);
   }
   .navbar-links li {
     flex-basis: 45.5px;
@@ -131,7 +151,7 @@ html::-webkit-scrollbar-thumb {
     cursor: pointer;
     border: none;
     background-color: transparent;
-    color: rgb(64, 41, 0);
+    color: var(--selection-bg-color);
     font-size: 3rem;
     font-weight: 600;
   }
@@ -149,7 +169,7 @@ html::-webkit-scrollbar-thumb {
   position: relative;
   padding: 11.5rem;
   padding-top: 9rem;
-  background-color: white;
+  background-color: var(--white);
   display: flex;
   gap: 2rem;
   justify-content: space-around;
@@ -168,10 +188,10 @@ html::-webkit-scrollbar-thumb {
 }
 .home-content h2 {
   font-size: 5rem;
-  color: rgb(121, 78, 0);
+  color: var(--content-color);
 }
 .home-content h2 span {
-  color: rgb(255, 174, 26);
+  color: var(--third-special-color);
 }
 .home-content p {
   font-size: 3rem;
@@ -179,20 +199,20 @@ html::-webkit-scrollbar-thumb {
   margin-bottom: 2rem;
 }
 .home-content-btn {
-  background-color: rgb(255, 174, 26);
+  background-color: var(--third-special-color);
   padding: 1rem;
   padding-left: 2rem;
   padding-right: 2rem;
   border-radius: 50px;
   font-size: 2rem;
-  color: white;
+  color: var(--white);
   border: none;
   outline: none;
   font-weight: 600;
   margin-left: 5.1225%;
 }
 .home-content a:hover {
-  background-color: rgb(128, 83, 0);
+  background-color: var(--hover-color);
 }
 .home-content a:hover span {
   padding-right: 0.25rem;
@@ -204,15 +224,15 @@ html::-webkit-scrollbar-thumb {
   font-size: 2.5rem;
 }
 .social-icons-links a {
-  color: rgb(255, 192, 77);
+  color: var(--links-color);
   border-radius: 100%;
   padding: 0.25rem 0.75rem;
-  background: black;
+  background: var(--black);
   transition: all 0.2s linear;
 }
 .social-icons-links a:hover {
-  background-color: rgb(255, 192, 77);
-  color: black;
+  background-color: var(--links-color);
+  color: var(--black);
 }
 @media (max-width: 950px) {
   .home {
@@ -263,7 +283,7 @@ html::-webkit-scrollbar-thumb {
 .about {
   padding: 5rem;
   padding-top: 80px;
-  background-color: rgb(255, 249, 239);
+  background-color: var(--primary-bg-color);
 }
 .about-info {
   display: flex;
@@ -293,7 +313,7 @@ html::-webkit-scrollbar-thumb {
   font-size: 1.5rem;
 }
 .about-box span {
-  color: rgb(255, 170, 13);
+  color: var(--special-color);
 }
 .about-email {
   text-transform: lowercase;
@@ -306,7 +326,7 @@ html::-webkit-scrollbar-thumb {
 .resume-btn {
   width: 27%;
   display: flex;
-  background-color: rgb(255, 174, 26);
+  background-color: var(--third-special-color);
   padding: 1rem;
   border-radius: 10px;
   font-size: 2rem;
@@ -317,10 +337,10 @@ html::-webkit-scrollbar-thumb {
   justify-content: center;
 }
 .resume-btn a {
-  color: white;
+  color: var(--white);
 }
 .resume-btn:hover {
-  background-color: rgb(128, 83, 0);
+  background-color: var(--hover-color);
 }
 .resume-btn:hover span {
   padding-right: 0.25rem;
@@ -379,7 +399,7 @@ html::-webkit-scrollbar-thumb {
 
 /* education starts */
 .education {
-  background-color: white;
+  background-color: var(--white);
   padding: 8rem;
 }
 .education-quote {
@@ -394,12 +414,12 @@ html::-webkit-scrollbar-thumb {
 .education-box {
   padding: 2rem;
   margin-top: 1rem;
-  border: 1px solid black;
+  border: 1px solid var(--black);
   border-radius: 10px;
   width: 50%;
 }
 .education-box:hover {
-  box-shadow: 1px 1px 3px rgb(0, 0, 0);
+  box-shadow: 1px 1px 3px var(--black);
 }
 .education-content {
   display: flex;
@@ -408,7 +428,7 @@ html::-webkit-scrollbar-thumb {
   align-items: center;
 }
 .education-content h3 {
-  color: rgb(105, 75, 11);
+  color: var(--second-context-color);
   font-size: 2rem;
 }
 .education-content p {
@@ -417,8 +437,8 @@ html::-webkit-scrollbar-thumb {
 .education-content h4 {
   font-size: 1.5rem;
   padding-top: 0.5rem;
-  color: rgb(2, 93, 253);
-  font-family: "Nunito", sans-serif;
+  color: var(--important-color);
+  font-family: var(--secondary-font-family);
 }
 @media (max-width: 1050px) {
   .education-box {
@@ -482,10 +502,10 @@ html::-webkit-scrollbar-thumb {
 /* skills starts */
 .skills {
   padding: 7rem;
-  background-color: rgb(128, 83, 0);
+  background-color: var(--hover-color);
 }
 .skills-heading {
-  color: white;
+  color: var(--white);
 }
 .skills-container {
   display: flex;
@@ -505,12 +525,12 @@ html::-webkit-scrollbar-thumb {
   padding: 1rem;
   margin: 1rem;
   border-radius: 10px;
-  background-color: black;
+  background-color: var(--black);
   width: 100px;
   height: 100px;
 }
 .skills-info span {
-  color: white;
+  color: var(--white);
   font-size: 2rem;
 }
 @media (max-width: 350px) {
@@ -531,7 +551,7 @@ html::-webkit-scrollbar-thumb {
 
 /* project starts */
 .projects {
-  background-color: white;
+  background-color: var(--white);
   padding: 3rem;
   padding-top: 10rem;
 }
@@ -542,12 +562,12 @@ html::-webkit-scrollbar-thumb {
   gap: 2rem;
 }
 .project-info {
-  border: 1px solid black;
+  border: 1px solid var(--black);
   border-radius: 10px;
   padding: 2rem;
 }
 .project-image img {
-  border: 1px solid black;
+  border: 1px solid var(--black);
   border-radius: 10px;
   height: 250px;
   object-fit: cover;
@@ -557,19 +577,19 @@ html::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  font-family: "Nunito", sans-serif;
+  font-family: var(--secondary-font-family);
 }
 .project-desc h3 {
   font-size: 2rem;
   text-transform: uppercase;
-  color: rgb(105, 75, 11);
+  color: var(--second-context-color);
 }
 .project-desc p {
   font-size: 1.5rem;
 }
 .technologies-used p {
   text-transform: uppercase;
-  color: rgb(2, 93, 253);
+  color: var(--important-color);
   padding-bottom: 1rem;
 }
 .project-links {
@@ -578,15 +598,15 @@ html::-webkit-scrollbar-thumb {
   font-size: 2rem;
 }
 .project-links a {
-  color: rgb(255, 192, 77);
+  color: var(--links-color);
   border-radius: 100%;
   padding: 0.25rem 0.75rem;
-  background: black;
+  background: var(--black);
   transition: all 0.2s linear;
 }
 .project-links a:hover {
-  background-color: rgb(255, 192, 77);
-  color: black;
+  background-color: var(--links-color);
+  color: var(--black);
 }
 @media (max-width: 600px) {
   .project-image {
@@ -602,7 +622,7 @@ html::-webkit-scrollbar-thumb {
 
 /* experience starts */
 .experience {
-  background-color: rgb(255, 249, 239);
+  background-color: var(--primary-bg-color);
   padding: 3rem;
   padding-top: 10rem;
 }
@@ -616,12 +636,12 @@ html::-webkit-scrollbar-thumb {
 .experience-box {
   padding: 1rem;
   width: 50%;
-  border-top: 0.25rem dashed rgb(2, 93, 253);
+  border-top: 0.25rem dashed var(--important-color);
   position: relative;
 }
 .experience-box h3 {
   font-size: 2rem;
-  color: rgb(105, 75, 11);
+  color: var(--second-context-color);
 }
 .experience-box p {
   font-size: 1.5rem;
@@ -631,8 +651,8 @@ html::-webkit-scrollbar-thumb {
   position: absolute;
   top: 50%;
   border-radius: 50%;
-  color: rgb(2, 93, 253);
-  background-color: black;
+  color: var(--important-color);
+  background-color: var(--black);
   height: 3.25rem;
   width: 3.25rem;
   display: flex;
@@ -640,14 +660,14 @@ html::-webkit-scrollbar-thumb {
   justify-content: center;
 }
 .experience-box:nth-child(odd) {
-  border-right: 0.25rem dashed rgb(2, 93, 253);
+  border-right: 0.25rem dashed var(--important-color);
   border-top-right-radius: 2rem;
   border-bottom-right-radius: 2rem;
   margin-left: 2rem;
   padding-left: 0;
 }
 .experience-box:nth-child(even) {
-  border-left: 0.25rem dashed rgb(2, 93, 253);
+  border-left: 0.25rem dashed var(--important-color);
   border-top-left-radius: 2rem;
   border-bottom-left-radius: 2rem;
   margin-right: 2rem;
@@ -682,7 +702,7 @@ html::-webkit-scrollbar-thumb {
 
 /* contact starts */
 .contact {
-  background-color: rgb(255, 255, 255);
+  background-color: var(--white);
   padding: 3rem;
   padding-top: 7rem;
 }
@@ -694,18 +714,18 @@ html::-webkit-scrollbar-thumb {
 .field input,
 .message textarea {
   width: 100%;
-  border: 1px solid black;
+  border: 1px solid var(--black);
   border-radius: 10px;
   padding: 1rem;
   position: relative;
 }
 .field input::placeholder,
 .message textarea::placeholder {
-  color: rgb(121, 78, 0);
+  color: var(--content-color);
 }
 .field input:hover,
 .message textarea:hover {
-  color: rgb(255, 170, 13);
+  color: var(--special-color);
 }
 .button-area {
   display: flex;
@@ -714,15 +734,15 @@ html::-webkit-scrollbar-thumb {
   padding: 1rem;
 }
 .button-area button {
-  background-color: rgb(255, 170, 13);
+  background-color: var(--special-color);
   padding: 1rem;
   border-radius: 10px;
   cursor: pointer;
 }
 .button-area button:hover {
-  background-color: rgb(255, 255, 255);
-  border: 1px solid black;
-  color: rgb(255, 170, 13);
+  background-color: var(--white);
+  border: 1px solid var(--black);
+  color: var(--special-color);
 }
 /* contact ends */
 
@@ -732,8 +752,8 @@ html::-webkit-scrollbar-thumb {
   flex-direction: column;
   padding: 2.5rem 5rem 0 5rem;
   font-size: 1.5rem;
-  background-color: rgb(0, 0, 77);
-  color: white;
+  background-color: var(--footer-color);
+  color: var(--white);
   gap: 5rem;
 }
 .footer-top {
@@ -750,14 +770,14 @@ html::-webkit-scrollbar-thumb {
   color: rgb(242, 242, 242);
 }
 .singlelink a {
-  color: white;
+  color: var(--white);
 }
 .singlelink:hover a,
 .singlelink:hover i {
-  color: rgb(255, 174, 26);
+  color: var(--third-special-color);
 }
 .footer-contact-info i {
-  color: rgb(255, 174, 26);
+  color: var(--third-special-color);
 }
 .footer-contact-info .email {
   text-transform: lowercase;
@@ -769,14 +789,14 @@ html::-webkit-scrollbar-thumb {
 }
 .share a {
   border-radius: 50%;
-  background-color: white;
-  color: rgb(0, 0, 77);
+  background-color: var(--white);
+  color: var(--footer-color);
   padding: 1rem;
 }
 .share a:hover {
-  background-color: rgb(0, 0, 77);
-  border: 1px solid white;
-  color: rgb(255, 174, 26);
+  background-color: var(--footer-color);
+  border: 1px solid var(--white);
+  color: var(--third-special-color);
 }
 .footer-bottom {
   text-align: center;
