@@ -197,6 +197,7 @@ html::-webkit-scrollbar-thumb {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 2rem;
+  text-transform: uppercase;
 }
 .home-content-btn {
   background-color: var(--third-special-color);
