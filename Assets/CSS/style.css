@@ -312,6 +312,8 @@ html::-webkit-scrollbar-thumb {
 .about-content p {
   padding-top: 1rem;
   font-size: 1.5rem;
+  text-transform: none;
+  text-align: justify;
 }
 .about-box span {
   color: var(--special-color);
@@ -646,6 +648,8 @@ html::-webkit-scrollbar-thumb {
 }
 .experience-box p {
   font-size: 1.5rem;
+  text-transform: none;
+  text-align: justify;
 }
 .experience-box span {
   font-size: 2rem;
