@@ -529,7 +529,7 @@ html::-webkit-scrollbar-thumb {
   margin: 1rem;
   border-radius: 10px;
   background-color: var(--black);
-  width: 100px;
+  width: 115px;
   height: 100px;
 }
 .skills-info span {
